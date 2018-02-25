@@ -23,6 +23,7 @@ $ npm run start:server (http://localhost:5000)<br />
 $ cd ../ - back to root directory<br />
 $ npm test - run all tests<br />
 
-## Pushing to PCF
-$ cd server/ directory and make sure you copy the build from root directory to /server/ directory<br />
-$ cf push -f manifest-[your env here].yml (env = dev, qa or pr)<br />
+## Pushing to Heroku
+$ git add .<br />
+$ git commit -m "commit message"<br />
+$ git push heroku master<br />
