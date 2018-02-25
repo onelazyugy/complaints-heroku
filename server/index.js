@@ -11,7 +11,7 @@ let app = express();
 app.use(bodyParser.json());
 
 app.get('/api/ping', function (req, res) {
-    res.send('pong!');
+    res.send('{"message":"pong!"}');
 });
 
 // app.use(express.static(__dirname + '/build/'));
