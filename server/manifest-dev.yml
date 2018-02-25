@@ -1,0 +1,9 @@
+---
+applications:
+- name: complaints-ui-dev
+  memory: 256MB
+  instances: 1
+  buildpack: nodejs_buildpack
+  env:
+    NODE_ENV: 'dev'
+  command: node index.js

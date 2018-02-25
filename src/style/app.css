@@ -1,0 +1,17 @@
+.app-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 50px;
+}
+.app-body-bg {
+  background: #E5EBF3;
+  padding: 10px;
+}
+.header-bg {
+  background: white;
+  color: black;
+}
+.footer-bg {
+  background: #434444;
+  color: white;
+  height: 100%;
+}
