@@ -1,0 +1,23 @@
+{
+  "local": {
+    "projectInfo": {
+      "appName": "complaints",
+      "env": "local"
+    },
+    "url": "http://localhost:5000"
+  },
+  "dev": {
+    "projectInfo": {
+        "appName": "complaints",
+        "env": "dev"
+      },
+    "url": ""
+  },
+  "pr": {
+    "projectInfo": {
+        "appName": "complaints",
+        "env": "pr"
+      },
+    "url": ""
+  }
+}

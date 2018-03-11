@@ -4,10 +4,12 @@ const request = require('request');
 const bodyParser = require('body-parser');
 const btoa = require('btoa');
 const path = require('path');
+const cors = require('cors');
 
 
 const port = process.env.PORT || 5000;
 let app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/api/ping', function (req, res) {

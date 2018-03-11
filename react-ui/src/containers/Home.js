@@ -9,7 +9,7 @@ import { saveComplaint } from '../actions/HomeAction';
 
 class Home extends Component {
   componentDidMount = () => {
-    // this.props.onSaveComplaint();
+    this.props.onSaveComplaint();
   };
 
   render = () => {
@@ -50,4 +50,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(null, null)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
