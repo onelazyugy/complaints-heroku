@@ -29,6 +29,7 @@ class Home extends Component {
               <Textarea label="Please enter a description of the incident" floatingLabel={true} />
               <Input label="Your info - optional" floatingLabel={true} />
               <div className="mui--text-right"><Button variant="raised" color="primary">Submit</Button></div>
+              response: {JSON.stringify(this.props.complaint)};
             </div>
           </Col>
           <Col md="3"/>

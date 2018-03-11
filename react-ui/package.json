@@ -29,7 +29,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "node_modules/eslint/bin/eslint.js src",
-    "build:local": "gulp local",
+    "build:local": "gulp local && react-scripts build",
     "build:dev": "gulp dev && react-scripts build"
   }
 }
