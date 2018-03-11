@@ -14,6 +14,10 @@ app.get('/api/ping', function (req, res) {
     res.send('{"message":"pong!"}');
 });
 
+app.post('/api/complaint', function (req, res) {
+  res.send('{"message":"save success!"}');
+});
+
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 
 app.get('*', (req, res) => {

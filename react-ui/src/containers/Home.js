@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
-import Container from 'muicss/lib/react/container';
 import Button from 'muicss/lib/react/button';
 import Input from 'muicss/lib/react/input';
 import Textarea from 'muicss/lib/react/textarea';
+import { saveComplaint } from '../actions/HomeAction';
 
 class Home extends Component {
   componentDidMount = () => {
-  
+    // this.props.onSaveComplaint();
   };
 
   render = () => {
@@ -35,6 +35,18 @@ class Home extends Component {
         </Row>
       </div>
     );
+  };
+}
+
+const mapDispatchToProps = dispatch => ({
+  onSaveComplaint(complaint) {
+    dispatch(saveComplaint(complaint));
+  }
+});
+
+function mapStateToProps(state) {
+  return {
+    complaint: state.homeReducer
   };
 }
 
