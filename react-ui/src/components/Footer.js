@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="mui--text-center footer-bg">
-      <p>Footer page!</p>
+      <p>&copy;2018</p>
     </div>
   );
 };

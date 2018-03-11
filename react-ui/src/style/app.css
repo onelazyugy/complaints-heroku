@@ -6,10 +6,11 @@
   background: #E5EBF3;
   padding: 10px;
 }
-.header-bg {
-  background: white;
-  color: black;
-}
+/* .header-bg {
+  background: "#ffffff";
+  position: "fixed";
+  top: 0px;
+} */
 .footer-bg {
   background: #434444;
   color: white;

@@ -10,7 +10,7 @@ class About extends Component {
   render = () => {
     return (
       <div>
-        <h4>About Page</h4>
+        <h4>Let your voice be heard and freely to report anything. Your report will remain anonymous</h4>
       </div>
     );
   };
