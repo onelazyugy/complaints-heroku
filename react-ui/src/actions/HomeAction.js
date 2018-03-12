@@ -23,3 +23,10 @@ export const saveComplaint = (complaint) => dispatch => {
       console.error(error);
     });
 };
+
+export const storeComplaintDetails = (complaint) => dispatch => {
+    dispatch({
+        type: types.STORE_COMPLAINT_DETAILS,
+        payload: complaint
+    });
+}

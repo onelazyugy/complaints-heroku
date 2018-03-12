@@ -1,3 +1,4 @@
 export default {
-    complaint: {}
+    saveComplaintResponse: {},
+    complaintDetails: {}
 }
