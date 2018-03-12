@@ -3,9 +3,10 @@ import { connect } from "react-redux";
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
 import Button from 'muicss/lib/react/button';
-import Input from 'muicss/lib/react/input';
 import Textarea from 'muicss/lib/react/textarea';
 import { saveComplaint, storeComplaintDetails } from '../actions/HomeAction';
+
+import TextField from 'material-ui/TextField';
 
 class Home extends Component {
   componentDidMount = () => {};
@@ -38,7 +39,7 @@ class Home extends Component {
   onDescriptionChange = (event) => {
     const complaintDetails = Object.assign({}, this.props.complaintDetails);
     const description = event.target.value;
-    complaintDetails.description = description;
+    complaintDetails.desc = description;
     this.props.onStoreComplaintDetails(complaintDetails);
   };
 
@@ -53,9 +54,9 @@ class Home extends Component {
     const response = this.props.saveComplaintResponse;
     let responseComponent;
     if(response.responseCode === 0) {
-      responseComponent = <div>Incident Id: {response.result}</div>
-    } else {
-      // responseComponent = <div>Unable to process your request, please try again!</div>
+      responseComponent = <div><label style={{color:"green"}}>Success!</label><br /><label>Incident Id: {response.result}</label></div>
+    } else if(response.responseCode !== 0 && response.result === "") {
+      responseComponent = <div>Unable to process your request, please try again!</div>
     }
     return responseComponent;
   };
@@ -71,13 +72,12 @@ class Home extends Component {
           <Col md="3" />
           <Col md="6">
             <div className="mui--text-left" style={formStyle}>
-              <Input label="Incident Location" floatingLabel={true} onChange={this.onLocationChange}/>
-              <Input label="Inciden Date" floatingLabel={true} onChange={this.onIncidentDateChange}/>
-              <Input label="Type of Incident" floatingLabel={true} onChange={this.onIncidentTypeChange}/>
-              <Textarea label="Please enter a description of the incident" floatingLabel={true} onChange={this.onDescriptionChange}/>
-              <Input label="Your info - optional" floatingLabel={true} onChange={this.onUserInfoChange}/>
+              <TextField onChange={this.onLocationChange} fullWidth={true} floatingLabelText="Incident Location" value={this.props.complaintDetails.location}/>
+              <TextField onChange={this.onIncidentDateChange} fullWidth={true} floatingLabelText="Incident Date" value={this.props.complaintDetails.incidentDate}/>
+              <TextField onChange={this.onIncidentTypeChange} fullWidth={true} floatingLabelText="Type of Incident" value={this.props.complaintDetails.incidentType}/>
+              <TextField onChange={this.onDescriptionChange} fullWidth={true} multiLine={true} floatingLabelText="Please enter a description of the incident" value={this.props.complaintDetails.desc}/>
+              <TextField onChange={this.onUserInfoChange} fullWidth={true} floatingLabelText="Your info - optional" value={this.props.complaintDetails.userInfo}/>
               <div className="mui--text-right"><Button variant="raised" color="primary" onClick={this.onSubmitComplaint}>Submit</Button></div>
-              
               {this.processSaveComplaintResponse()}
             </div>
           </Col>
