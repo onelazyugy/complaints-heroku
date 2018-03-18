@@ -157,11 +157,7 @@ class Home extends Component {
                           <img src="images/pic05.jpg" alt="" />
                         </a>
                         <p>
-                          Duis neque nisi, dapibus sed mattis quis, rutrum
-                          accumsan sed. Suspendisse eu varius nibh. Suspendisse
-                          vitae magna eget odio amet mollis justo facilisis
-                          quis. Sed sagittis mauris amet tellus gravida lorem
-                          ipsum.
+                          something to describe us here
                         </p>
                       </section>
                     </div>
