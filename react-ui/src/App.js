@@ -16,13 +16,9 @@ class App extends Component {
         <MuiThemeProvider>
           <BrowserRouter>
             <div className="container">
-              {/* <Header /> */}
-              <div>
-                <Route exact={true} path="/" component={Home} />
-                <Route exact={true} path="/about" component={About} />
-                <Route exact={true} path="/about/user" component={AboutUser} />
-              </div>
-              {/* <Footer /> */}
+              <Route exact={true} path="/" component={Home} />
+              <Route exact={true} path="/about" component={About} />
+              <Route exact={true} path="/about/user" component={AboutUser} />
             </div>
           </BrowserRouter>
         </MuiThemeProvider>
