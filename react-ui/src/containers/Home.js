@@ -72,54 +72,73 @@ class Home extends Component {
   render = () => {
     return (
       <div className="mui--text-center">
-        <div className="mui--text-left" style={{background: 'lightgoldenrodyellow'}}>
+        <div className="mui--text-left">
           <Row>
-            <Col md="2" />
-            <Col md="8">
-              <TextField
-                onChange={this.onLocationChange}
-                fullWidth={true}
-                floatingLabelText="Incident Location"
-                value={this.props.complaintDetails.location}
-              />
-              <TextField
-                onChange={this.onIncidentDateChange}
-                fullWidth={true}
-                floatingLabelText="Incident Date"
-                value={this.props.complaintDetails.incidentDate}
-              />
-              <TextField
-                onChange={this.onIncidentTypeChange}
-                fullWidth={true}
-                floatingLabelText="Type of Incident"
-                value={this.props.complaintDetails.incidentType}
-              />
-              <TextField
-                onChange={this.onDescriptionChange}
-                fullWidth={true}
-                multiLine={true}
-                floatingLabelText="Please enter a description of the incident"
-                value={this.props.complaintDetails.desc}
-              />
-              <TextField
-                onChange={this.onUserInfoChange}
-                fullWidth={true}
-                floatingLabelText="Your info - optional"
-                value={this.props.complaintDetails.userInfo}
-              />
-              <div className="mui--text-right">
-                <Button
-                  variant="raised"
-                  color="danger"
-                  onClick={this.onSubmitComplaint}
+            <Col md="12">
+              <div style={{ background: "white", borderBottom: 1 }}>
+                <div
+                  style={{
+                    paddingTop: 35,
+                    paddingRight: 0,
+                    paddingBottom: 35,
+                    paddingLeft: 0
+                  }}
                 >
-                  Submit
-                </Button>
+                  <div className="container">
+                    <div className="row">
+                      <div className="12u 12u(mobile)">
+                      <section>
+                        <header>
+                          <h2>Submit a complaint</h2>
+                        </header>
+                        <TextField
+                          onChange={this.onLocationChange}
+                          fullWidth={true}
+                          floatingLabelText="Incident Location"
+                          value={this.props.complaintDetails.location}
+                        />
+                        <TextField
+                          onChange={this.onIncidentDateChange}
+                          fullWidth={true}
+                          floatingLabelText="Incident Date"
+                          value={this.props.complaintDetails.incidentDate}
+                        />
+                        <TextField
+                          onChange={this.onIncidentTypeChange}
+                          fullWidth={true}
+                          floatingLabelText="Type of Incident"
+                          value={this.props.complaintDetails.incidentType}
+                        />
+                        <TextField
+                          onChange={this.onDescriptionChange}
+                          fullWidth={true}
+                          multiLine={true}
+                          floatingLabelText="Please enter a description of the incident"
+                          value={this.props.complaintDetails.desc}
+                        />
+                        <TextField
+                          onChange={this.onUserInfoChange}
+                          fullWidth={true}
+                          floatingLabelText="Your info - optional"
+                          value={this.props.complaintDetails.userInfo}
+                        />
+                        <div className="mui--text-right">
+                          <Button
+                            variant="raised"
+                            color="danger"
+                            onClick={this.onSubmitComplaint}
+                          >
+                            Submit
+                          </Button>
+                        </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Col>
-            <Col md="2" />
           </Row>
-          {this.processSaveComplaintResponse()}
         </div>
 
         <Row>
@@ -138,10 +157,11 @@ class Home extends Component {
                           <img src="images/pic05.jpg" alt="" />
                         </a>
                         <p>
-                          Duis neque nisi, dapibus sed mattis quis, rutrum accumsan
-                          sed. Suspendisse eu varius nibh. Suspendisse vitae magna
-                          eget odio amet mollis justo facilisis quis. Sed sagittis
-                          mauris amet tellus gravida lorem ipsum.
+                          Duis neque nisi, dapibus sed mattis quis, rutrum
+                          accumsan sed. Suspendisse eu varius nibh. Suspendisse
+                          vitae magna eget odio amet mollis justo facilisis
+                          quis. Sed sagittis mauris amet tellus gravida lorem
+                          ipsum.
                         </p>
                       </section>
                     </div>
