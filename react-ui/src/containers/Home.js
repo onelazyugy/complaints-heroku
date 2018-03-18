@@ -62,16 +62,12 @@ class Home extends Component {
   };
 
   render = () => {
-    const formStyle={
-      background: "white",
-      padding: 10
-    }
     return (
       <div className="mui--text-center">
         <Row>
           <Col md="3" />
           <Col md="6">
-            <div className="mui--text-left" style={formStyle}>
+            <div className="mui--text-left" >
               <TextField onChange={this.onLocationChange} fullWidth={true} floatingLabelText="Incident Location" value={this.props.complaintDetails.location}/>
               <TextField onChange={this.onIncidentDateChange} fullWidth={true} floatingLabelText="Incident Date" value={this.props.complaintDetails.incidentDate}/>
               <TextField onChange={this.onIncidentTypeChange} fullWidth={true} floatingLabelText="Type of Incident" value={this.props.complaintDetails.incidentType}/>

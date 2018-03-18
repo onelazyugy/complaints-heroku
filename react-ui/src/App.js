@@ -17,7 +17,7 @@ class App extends Component {
           <BrowserRouter>
             <div className="container">
               {/* <Header /> */}
-              <div style={{marginTop: 65}} className="app-body-bg">
+              <div>
                 <Route exact={true} path="/" component={Home} />
                 <Route exact={true} path="/about" component={About} />
                 <Route exact={true} path="/about/user" component={AboutUser} />

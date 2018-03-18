@@ -27,3 +27,5 @@ $ npm test - run all tests<br />
 $ git add .<br />
 $ git commit -m "commit message"<br />
 $ git push heroku master<br />
+
+$ git push heroku <YOUR_BRANCH>:master
