@@ -139,6 +139,11 @@ class Home extends Component {
               </div>
             </Col>
           </Row>
+          <Row> 
+          <Col md="12">
+          {this.processSaveComplaintResponse()}
+          </Col>
+          </Row>
         </div>
 
         <Row>
