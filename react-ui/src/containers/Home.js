@@ -5,8 +5,9 @@ import Col from "muicss/lib/react/col";
 import Button from "muicss/lib/react/button";
 import Textarea from "muicss/lib/react/textarea";
 import { saveComplaint, storeComplaintDetails } from "../actions/HomeAction";
-
 import TextField from "material-ui/TextField";
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
 
 class Home extends Component {
   componentDidMount = () => {};
@@ -122,6 +123,39 @@ class Home extends Component {
                           floatingLabelText="Your info - optional"
                           value={this.props.complaintDetails.userInfo}
                         />
+                        <SelectField style={{width:"100%"}}
+                          floatingLabelText="Choose a category"
+                          value={3}
+                        >
+                          <MenuItem value={1} primaryText="Political Corruption" />
+                          <MenuItem value={2} primaryText="Child Abuse" />
+                          <MenuItem value={3} primaryText="Discrimination" />
+                          <MenuItem value={4} primaryText="Domestic Violence" />
+                          <MenuItem value={5} primaryText="Violation of Company Policy" />
+                          <MenuItem value={5} primaryText="Government Fraud" />
+                          <MenuItem value={5} primaryText="Elder Abuse" />
+                          <MenuItem value={5} primaryText="Fraud" />
+                          <MenuItem value={5} primaryText="Terrorism" />
+                          <MenuItem value={5} primaryText="Insurance Fraud" />
+                          <MenuItem value={5} primaryText="Bullying" />
+                          <MenuItem value={5} primaryText="Pay Inequality" />
+                          <MenuItem value={5} primaryText="Missing Person Location" />
+
+                          <MenuItem value={5} primaryText="Prostitution" />
+                          <MenuItem value={5} primaryText="Hate Crime" />
+                          <MenuItem value={5} primaryText="Smuggling" />
+                          <MenuItem value={5} primaryText="Murder" />
+                          <MenuItem value={5} primaryText="Health and Safety Violations" />
+                          <MenuItem value={5} primaryText="Unregistered Sex Offender" />
+                          <MenuItem value={5} primaryText="Harassement" />
+                          <MenuItem value={5} primaryText="ID Theft" />
+                          <MenuItem value={5} primaryText="Threats" />
+                          <MenuItem value={5} primaryText="Visa Abuse" />
+                          <MenuItem value={5} primaryText="Human Trafficking" />
+                          <MenuItem value={5} primaryText="Corporate Abuse" />
+                          <MenuItem value={5} primaryText="Tax Fraud" />
+                          <MenuItem value={5} primaryText="Other" />
+                        </SelectField>
                         <div className="mui--text-right">
                           <Button
                             variant="raised"
@@ -150,15 +184,15 @@ class Home extends Component {
           <Col md="12">
             <div id="content-wrapper">
               <div id="content">
-                <div class="container">
-                  <div class="row">
-                    <div class="4u 12u(mobile)">
+                <div className="container">
+                  <div className="row">
+                    <div className="4u 12u(mobile)">
                       <section>
                         <header>
                           <h2>Who We Are</h2>
                           <h3>A subheading about who we are</h3>
                         </header>
-                        <a href="#" class="feature-image">
+                        <a href="#" className="feature-image">
                           <img src="images/pic05.jpg" alt="" />
                         </a>
                         <p>
@@ -166,13 +200,13 @@ class Home extends Component {
                         </p>
                       </section>
                     </div>
-                    <div class="4u 12u(mobile)">
+                    <div className="4u 12u(mobile)">
                       <section>
                         <header>
                           <h2>What We Do</h2>
                           <h3>A subheading about what we do</h3>
                         </header>
-                        <ul class="check-list">
+                        <ul className="check-list">
                           <li>Sed mattis quis rutrum accum</li>
                           <li>Eu varius nibh suspendisse lorem</li>
                           <li>Magna eget odio amet mollis justo</li>
@@ -181,13 +215,13 @@ class Home extends Component {
                         </ul>
                       </section>
                     </div>
-                    <div class="4u 12u(mobile)">
+                    <div className="4u 12u(mobile)">
                       <section>
                         <header>
                           <h2>What People Are Saying</h2>
                           <h3>And a final subheading about our clients</h3>
                         </header>
-                        <ul class="quote-list">
+                        <ul className="quote-list">
                           <li>
                             <img src="images/pic06.jpg" alt="" />
                             <p>"Neque nisidapibus mattis"</p>
